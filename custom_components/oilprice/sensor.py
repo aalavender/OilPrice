@@ -54,7 +54,7 @@ class HotMoviesSensor(Entity):
 
         for dl in dls:
             self._entries[dl.select('dt')[0].text] = dl.select('dd')[0].text
-        self._entries["update_time"] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self._entries["update_time"] = datetime.datetime.now().strftime('%Y-%m-%d')
         self._entries["tips"] = soup.select("#youjiaCont > div:nth-of-type(2) > span")[0].text.strip()  # 油价涨跌信息
 
     @property

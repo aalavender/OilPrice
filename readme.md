@@ -29,22 +29,23 @@ list-card 的lovelace-ui配置：
 ```
     cards:
       - content: >
-          > ### [[ sensor.zui_xin_you_jie.state ]]
+          <ha-icon icon="mdi:update"></ha-icon> [[
+          sensor.zui_xin_you_jie.attributes.update_time ]]
 
-          *[[ sensor.zui_xin_you_jie.attributes.tips ]]*
-
-
-          > 92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font
+          ##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font
           color=#ea4335>[[ sensor.zui_xin_you_jie.attributes.浙江92#汽油 ]]
-          </font>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  95# <ha-icon
-          icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05> [[
+          </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  95#
+          <ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05> [[
           sensor.zui_xin_you_jie.attributes.浙江95#汽油 ]] </font> <p> 98#<ha-icon
           icon="mdi:gas-station"></ha-icon> <font color=#4285f4> [[
-          sensor.zui_xin_you_jie.attributes.浙江98#汽油 ]]</font> &nbsp;  &nbsp; 
-          &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon icon="mdi:gas-station"></ha-icon>
-          <font color=#34a853> [[ sensor.zui_xin_you_jie.attributes.浙江0#柴油 ]]
-          </font>
-            
+          sensor.zui_xin_you_jie.attributes.浙江98#汽油 ]]</font>&nbsp;  &nbsp; 
+          &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon
+          icon="mdi:gas-station"></ha-icon> <font color=#34a853> [[
+          sensor.zui_xin_you_jie.attributes.浙江0#柴油 ]] </font></center>
+
+          - [[ sensor.zui_xin_you_jie.state ]]  
+
+          - [[ sensor.zui_xin_you_jie.attributes.tips ]]
         title: 浙江油价
         type: markdown
 ```
