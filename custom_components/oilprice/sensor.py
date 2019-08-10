@@ -1,5 +1,5 @@
 """
-A component which allows you to parse http://www.qiyoujiage.com/zhejiang.shtml get hot movies
+A component which allows you to parse http://www.qiyoujiage.com/zhejiang.shtml get oil price
 
 For more details about this component, please refer to the documentation at
 https://github.com/aalavender/OilPrice/
@@ -30,9 +30,9 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
-    add_devices([HotMoviesSensor(hass, config)])
+    add_devices([OilPriceSensor(hass, config)])
 
-class HotMoviesSensor(Entity):
+class OilPriceSensor(Entity):
     def __init__(self, hass, config):
         self.hass = hass
         self._name = config[CONF_NAME]
