@@ -6,6 +6,7 @@ https://github.com/aalavender/OilPrice/
 
 """
 import logging
+import asyncio
 import voluptuous as vol
 import datetime
 from homeassistant.helpers.entity import Entity
@@ -29,17 +30,19 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_REGION): cv.string,
 })
 
-def setup_platform(hass, config, add_devices, discovery_info=None):
-    add_devices([OilPriceSensor(hass, config)])
+
+@asyncio.coroutine
+def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+    _LOGGER.info("async_setup_platform sensor oilprice")
+    async_add_devices([OilPriceSensor(name=config[CONF_NAME], region=config[CONF_REGION])],True)
+
 
 class OilPriceSensor(Entity):
-    def __init__(self, hass, config):
-        self.hass = hass
-        self._name = config[CONF_NAME]
-        self._region = config[CONF_REGION]
+    def __init__(self, name: str, region: str):
+        self._name = name
+        self._region = region
         self._state = None
         self._entries = {}
-        self.update()
 
     def update(self):
         _LOGGER.info("sensor oilprice update info from http://www.qiyoujiage.com/")
