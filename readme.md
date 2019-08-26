@@ -4,7 +4,8 @@
 数据源地址： http://www.qiyoujiage.com
 
 # 安装
-放入 <config directory>/custom_components/ 目录
+1 手动安装，放入 <config directory>/custom_components/ 目录
+2 hacs安装 CUSTOM REPOSITORIES中填入：https://github.com/aalavender/OilPrice
 
 # 配置
 **Example configuration.yaml:**
