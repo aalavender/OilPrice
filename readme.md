@@ -35,15 +35,15 @@ list-card 的lovelace-ui配置：
           sensor.zui_xin_you_jie.attributes.update_time ]]
 
           ##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font
-          color=#ea4335>[[ sensor.zui_xin_you_jie.attributes.浙江92#汽油 ]]
+          color=#ea4335>[[ sensor.zui_xin_you_jie.attributes.92# ]]
           </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  95#
           <ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05> [[
-          sensor.zui_xin_you_jie.attributes.浙江95#汽油 ]] </font> <p> 98#<ha-icon
+          sensor.zui_xin_you_jie.attributes.95# ]] </font> <p> 98#<ha-icon
           icon="mdi:gas-station"></ha-icon> <font color=#4285f4> [[
-          sensor.zui_xin_you_jie.attributes.浙江98#汽油 ]]</font>&nbsp;  &nbsp; 
+          sensor.zui_xin_you_jie.attributes.98# ]]</font>&nbsp;  &nbsp; 
           &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴<ha-icon
           icon="mdi:gas-station"></ha-icon> <font color=#34a853> [[
-          sensor.zui_xin_you_jie.attributes.浙江0#柴油 ]] </font></center>
+          sensor.zui_xin_you_jie.attributes.0# ]] </font></center>
 
           - [[ sensor.zui_xin_you_jie.state ]]  
 
