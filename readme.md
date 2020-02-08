@@ -23,7 +23,8 @@ sensor:
 
 ![avatar](https://github.com/aalavender/OilPrice/blob/master/2.PNG)
 
-建议采用[markdown-mod](https://github.com/thomasloven/lovelace-markdown-mod )进行展示，效果是这样的
+~~建议采用[markdown-mod](https://github.com/thomasloven/lovelace-markdown-mod )进行展示，效果是这样的~~
+最新的Lovelace-ui已经集成了markdown控件，格式所有区别
 
 ![avatar](https://github.com/aalavender/OilPrice/blob/master/1.PNG)
 
@@ -50,4 +51,27 @@ list-card 的lovelace-ui配置：
           - [[ sensor.zui_xin_you_jie.attributes.tips ]]
         title: 浙江油价
         type: markdown
+```
+新版的配置：
+```yaml
+        cards:
+          - type: markdown
+            content: >
+              <ha-icon icon="mdi:update"></ha-icon> {{
+              state_attr('sensor.zui_xin_you_jie', 'update_time')}} 
+
+              ##  <center>92#<ha-icon icon="mdi:gas-station"></ha-icon>  <font
+              color=#ea4335> {{ state_attr('sensor.zui_xin_you_jie', '92')}}
+              </font>&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;95#
+              <ha-icon icon="mdi:gas-station"></ha-icon>  <font color=#fbbc05> 
+              {{ state_attr('sensor.zui_xin_you_jie', '95')}} </font> <p> 98#
+              <ha-icon icon="mdi:gas-station"></ha-icon> <font color=#4285f4> 
+              {{ state_attr('sensor.zui_xin_you_jie', '98')}}</font>&nbsp; 
+              &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 0#柴油<ha-icon
+              icon="mdi:gas-station"></ha-icon> <font color=#34a853>  {{
+              state_attr('sensor.zui_xin_you_jie', '0')}} </font></center> 
+
+              - {{ states('sensor.zui_xin_you_jie') }} 
+
+              - {{ state_attr('sensor.zui_xin_you_jie', 'tips')}}
 ```

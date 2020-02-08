@@ -57,7 +57,7 @@ class OilPriceSensor(Entity):
         self._state = soup.select("#youjiaCont > div")[1].contents[0].strip()
 
         for dl in dls:
-            k = re.search("\d+#", dl.select('dt')[0].text).group()
+            k = re.search("\d+", dl.select('dt')[0].text).group()
             self._entries[k] = dl.select('dd')[0].text
         self._entries["update_time"] = datetime.datetime.now().strftime('%Y-%m-%d')
         self._entries["tips"] = soup.select("#youjiaCont > div:nth-of-type(2) > span")[0].text.strip()  # 油价涨跌信息
