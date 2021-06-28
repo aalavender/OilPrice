@@ -1,6 +1,7 @@
 {
   "domain": "oilprice",
   "name": "oilprice",
+  "version": "0.0.1",
   "documentation": "https://github.com/aalavender/OilPrice/blob/master/README.md",
   "dependencies": [],
   "codeowners": ["@aalavender"],
