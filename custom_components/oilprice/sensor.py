@@ -75,5 +75,5 @@ class OilPriceSensor(Entity):
         return ICON
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return self._entries
