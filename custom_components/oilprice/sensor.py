@@ -32,8 +32,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 
-@asyncio.coroutine
-def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     _LOGGER.info("async_setup_platform sensor oilprice")
     async_add_devices([OilPriceSensor(name=config[CONF_NAME], region=config[CONF_REGION])],True)
 
@@ -75,5 +74,5 @@ class OilPriceSensor(Entity):
         return ICON
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return self._entries
