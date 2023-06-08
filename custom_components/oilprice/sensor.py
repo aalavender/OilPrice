@@ -17,7 +17,7 @@ from homeassistant.const import (CONF_NAME, CONF_REGION)
 from requests import request
 from bs4 import BeautifulSoup
 
-__version__ = '0.1.1'
+__version__ = '0.1.0'
 _LOGGER = logging.getLogger(__name__)
 
 REQUIREMENTS = ['requests', 'beautifulsoup4']
@@ -74,5 +74,5 @@ class OilPriceSensor(Entity):
         return ICON
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return self._entries
