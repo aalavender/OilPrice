@@ -5,5 +5,5 @@
   "documentation": "https://github.com/aalavender/OilPrice/blob/master/README.md",
   "dependencies": [],
   "codeowners": ["@aalavender"],
-  "requirements": ["requests", "beautifulsoup4"]
+  "requirements": ["requests", "beautifulsoup4", "lxml"]
 }
