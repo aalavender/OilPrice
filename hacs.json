@@ -1,6 +1,7 @@
 {
     "name": "oilprice",
     "country": "CN",
+    "content_in_root": false,
     "render_readme": true,
-    "domains": []
+    "homeassistant": "2023.1.0"
 }
