@@ -17,7 +17,7 @@ from homeassistant.const import (CONF_NAME, CONF_REGION)
 from requests import request
 from bs4 import BeautifulSoup
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 _LOGGER = logging.getLogger(__name__)
 
 REQUIREMENTS = ['requests', 'beautifulsoup4']
@@ -32,8 +32,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 
-@asyncio.coroutine
-def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     _LOGGER.info("async_setup_platform sensor oilprice")
     async_add_devices([OilPriceSensor(name=config[CONF_NAME], region=config[CONF_REGION])],True)
 
@@ -75,5 +74,5 @@ class OilPriceSensor(Entity):
         return ICON
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return self._entries
